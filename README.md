@@ -14,7 +14,7 @@
   <a href="https://www.linkedin.com/in/apoorvan1/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="mailto:apoorvan10@gmail.com"><img src="https://img.shields.io/badge/Email-Say_hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://github.com/Apoorvan-A"><img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Résumé-View-6366F1?style=for-the-badge&logo=readdotcv&logoColor=white"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Résumé-View-6366F1?style=for-the-badge&logo=readdotcv&logoColor=white"/> https://drive.google.com/file/d/1yvuhKXTCddn88bbW_3cs1Wq-grvJ_isH/view?usp=sharing</a>
 </p>
 
 <p align="center">
