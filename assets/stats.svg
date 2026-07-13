@@ -1,0 +1,48 @@
+<svg width="1280" height="170" viewBox="0 0 1280 170" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="num" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A5B4FC"/>
+      <stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="170" rx="18" fill="#0B1020"/>
+  <rect x="0.5" y="0.5" width="1279" height="169" rx="18" fill="none" stroke="#8FA3FF" stroke-opacity="0.12"/>
+  <rect x="0" y="0" width="1280" height="4" rx="2" fill="#6366F1" opacity="0.7"/>
+
+  <!-- separators -->
+  <g stroke="#8FA3FF" stroke-opacity="0.12">
+    <line x1="256"  y1="46" x2="256"  y2="128"/>
+    <line x1="512"  y1="46" x2="512"  y2="128"/>
+    <line x1="768"  y1="46" x2="768"  y2="128"/>
+    <line x1="1024" y1="46" x2="1024" y2="128"/>
+  </g>
+
+  <g text-anchor="middle">
+    <!-- 1 -->
+    <g transform="translate(128,0)">
+      <text y="92" font-size="48" font-weight="800" fill="url(#num)">1,275</text>
+      <text y="122" font-size="13" fill="#8792B8" font-family="'SFMono-Regular', Consolas, monospace">tx/s sustained</text>
+    </g>
+    <!-- 2 -->
+    <g transform="translate(384,0)">
+      <text y="92" font-size="48" font-weight="800" fill="url(#num)">70 ms</text>
+      <text y="122" font-size="13" fill="#8792B8" font-family="'SFMono-Regular', Consolas, monospace">p99 latency</text>
+    </g>
+    <!-- 3 -->
+    <g transform="translate(640,0)">
+      <text y="92" font-size="48" font-weight="800" fill="url(#num)">4.7&#215;</text>
+      <text y="122" font-size="13" fill="#8792B8" font-family="'SFMono-Regular', Consolas, monospace">throughput gain</text>
+    </g>
+    <!-- 4 -->
+    <g transform="translate(896,0)">
+      <text y="92" font-size="48" font-weight="800" fill="url(#num)">7</text>
+      <text y="122" font-size="13" fill="#8792B8" font-family="'SFMono-Regular', Consolas, monospace">ML models benchmarked</text>
+    </g>
+    <!-- 5 -->
+    <g transform="translate(1152,0)">
+      <text y="92" font-size="48" font-weight="800" fill="url(#num)">9.16</text>
+      <text y="122" font-size="13" fill="#8792B8" font-family="'SFMono-Regular', Consolas, monospace">CGPA / 10</text>
+    </g>
+  </g>
+</svg>
