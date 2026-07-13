@@ -1,0 +1,109 @@
+<svg width="1280" height="330" viewBox="0 0 1280 330" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="aurora" x1="0" y1="0" x2="1280" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="60" y1="0" x2="620" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366F1" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#8FA3FF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect width="1280" height="330" rx="20" fill="#0B1020"/>
+  <rect width="1280" height="330" rx="20" fill="url(#grid)"/>
+
+  <!-- Drifting aurora glows -->
+  <g filter="url(#soft)">
+    <ellipse cx="250" cy="120" rx="230" ry="150" fill="url(#glowA)">
+      <animate attributeName="cx" values="250;360;250" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="120;170;120" dur="14s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="1050" cy="230" rx="260" ry="170" fill="url(#glowB)">
+      <animate attributeName="cx" values="1050;930;1050" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="230;180;230" dur="16s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Left: identity -->
+  <g>
+    <text x="64" y="86" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
+          font-size="16" letter-spacing="4" fill="#67E8F9" font-weight="600">// BACKEND &#183; DISTRIBUTED SYSTEMS &#183; APPLIED ML</text>
+
+    <text x="60" y="168" font-size="76" font-weight="800" fill="url(#nameGrad)" letter-spacing="-1">Apoorvan A</text>
+
+    <text x="64" y="212" font-size="23" fill="#AEB8D8" font-weight="400">I build low-latency backends &amp; applied-ML systems.</text>
+
+    <!-- animated gradient underline -->
+    <rect x="64" y="232" width="0" height="4" rx="2" fill="url(#aurora)">
+      <animate attributeName="width" from="0" to="430" dur="1.4s" begin="0.3s" fill="freeze"/>
+    </rect>
+
+    <!-- tag row -->
+    <g font-family="'SFMono-Regular', Consolas, monospace" font-size="14" fill="#C7D2FE">
+      <g transform="translate(64,270)">
+        <rect x="0" y="0" width="86" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.06" stroke="#8FA3FF" stroke-opacity="0.25"/>
+        <text x="43" y="20" text-anchor="middle">FastAPI</text>
+      </g>
+      <g transform="translate(160,270)">
+        <rect x="0" y="0" width="118" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.06" stroke="#8FA3FF" stroke-opacity="0.25"/>
+        <text x="59" y="20" text-anchor="middle">Redis Streams</text>
+      </g>
+      <g transform="translate(288,270)">
+        <rect x="0" y="0" width="86" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.06" stroke="#8FA3FF" stroke-opacity="0.25"/>
+        <text x="43" y="20" text-anchor="middle">PyTorch</text>
+      </g>
+      <g transform="translate(384,270)">
+        <rect x="0" y="0" width="74" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.06" stroke="#8FA3FF" stroke-opacity="0.25"/>
+        <text x="37" y="20" text-anchor="middle">Docker</text>
+      </g>
+      <g transform="translate(468,270)">
+        <rect x="0" y="0" width="60" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.06" stroke="#8FA3FF" stroke-opacity="0.25"/>
+        <text x="30" y="20" text-anchor="middle">AWS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right: neural constellation -->
+  <g transform="translate(880,60)" stroke-linecap="round">
+    <g stroke="url(#aurora)" stroke-opacity="0.5" stroke-width="1.6">
+      <line x1="70" y1="40" x2="210" y2="30"/>
+      <line x1="210" y1="30" x2="300" y2="120"/>
+      <line x1="70" y1="40" x2="120" y2="150"/>
+      <line x1="120" y1="150" x2="300" y2="120"/>
+      <line x1="120" y1="150" x2="60" y2="210"/>
+      <line x1="300" y1="120" x2="250" y2="215"/>
+      <line x1="60" y1="210" x2="250" y2="215"/>
+      <line x1="210" y1="30" x2="120" y2="150"/>
+    </g>
+    <g fill="#0B1020" stroke="url(#aurora)" stroke-width="2.4">
+      <circle cx="70"  cy="40"  r="9"><animate attributeName="r" values="9;12;9" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="210" cy="30"  r="7"><animate attributeName="r" values="7;10;7" dur="3.4s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="300" cy="120" r="10"><animate attributeName="r" values="10;13;10" dur="3.8s" begin="0.8s" repeatCount="indefinite"/></circle>
+      <circle cx="120" cy="150" r="12" fill="#8B5CF6" fill-opacity="0.25"><animate attributeName="r" values="12;15;12" dur="3.2s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="60"  cy="210" r="7"><animate attributeName="r" values="7;9;7" dur="3.6s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="250" cy="215" r="8"><animate attributeName="r" values="8;11;8" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+    </g>
+    <!-- travelling pulse -->
+    <circle r="4" fill="#67E8F9">
+      <animateMotion dur="4s" repeatCount="indefinite" path="M70,40 L210,30 L300,120 L250,215 L60,210 L120,150 Z"/>
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

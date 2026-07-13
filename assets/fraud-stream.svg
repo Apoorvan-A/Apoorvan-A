@@ -1,0 +1,85 @@
+<svg width="1280" height="300" viewBox="0 0 1280 300" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+  <defs>
+    <linearGradient id="rail" x1="90" y1="0" x2="1150" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <radialGradient id="engGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="b1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="1280" height="300" rx="18" fill="#0B1020"/>
+  <rect x="0.5" y="0.5" width="1279" height="299" rx="18" fill="none" stroke="#8FA3FF" stroke-opacity="0.12"/>
+
+  <!-- Header row -->
+  <g>
+    <circle cx="42" cy="42" r="6" fill="#34D399">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="58" y="47" font-size="15" fill="#34D399" letter-spacing="2" font-weight="700">LIVE</text>
+    <text x="106" y="47" font-size="15" fill="#E6EDF3" letter-spacing="1">·  Real-Time Fraud Scoring Engine</text>
+  </g>
+  <!-- Stat chips -->
+  <g font-size="13" fill="#C7D2FE">
+    <g transform="translate(760,28)"><rect width="150" height="30" rx="15" fill="#22D3EE14" stroke="#22D3EE55"/><text x="75" y="20" text-anchor="middle" fill="#67E8F9">1,275 tx/s</text></g>
+    <g transform="translate(922,28)"><rect width="132" height="30" rx="15" fill="#6366F114" stroke="#6366F155"/><text x="66" y="20" text-anchor="middle" fill="#A5B4FC">p99 70 ms</text></g>
+    <g transform="translate(1066,28)"><rect width="176" height="30" rx="15" fill="#34D39914" stroke="#34D39955"/><text x="88" y="20" text-anchor="middle" fill="#6EE7B7">4.7&#215; throughput</text></g>
+  </g>
+
+  <!-- Rail -->
+  <line x1="120" y1="170" x2="820" y2="170" stroke="url(#rail)" stroke-width="3" stroke-opacity="0.55"/>
+
+  <!-- Stations -->
+  <g text-anchor="middle">
+    <!-- Ingest -->
+    <g transform="translate(120,170)">
+      <rect x="-58" y="-30" width="116" height="60" rx="10" fill="#0F1630" stroke="#6366F1" stroke-opacity="0.6"/>
+      <text y="-2" font-size="13" fill="#E6EDF3">INGEST</text>
+      <text y="16" font-size="10.5" fill="#7C89B4">FastAPI</text>
+    </g>
+    <!-- Redis Streams -->
+    <g transform="translate(470,170)">
+      <rect x="-72" y="-30" width="144" height="60" rx="10" fill="#0F1630" stroke="#22D3EE" stroke-opacity="0.6"/>
+      <text y="-2" font-size="13" fill="#E6EDF3">REDIS STREAMS</text>
+      <text y="16" font-size="10.5" fill="#7C89B4">consumer-group queue</text>
+    </g>
+    <!-- Scoring engine -->
+    <circle cx="820" cy="170" r="70" fill="url(#engGlow)"/>
+    <g transform="translate(820,170)">
+      <rect x="-70" y="-34" width="140" height="68" rx="12" fill="#0F1630" stroke="#8B5CF6" stroke-opacity="0.75"/>
+      <text y="-4" font-size="13" fill="#E6EDF3">SCORING</text>
+      <text y="14" font-size="10.5" fill="#7C89B4">ML + O(1) store</text>
+      <!-- alarm ring on fraud -->
+      <circle cx="0" cy="0" r="42" fill="none" stroke="#F87171" stroke-width="2.5" opacity="0">
+        <animate attributeName="r" values="42;64" dur="8s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.06;0.16" dur="8s" begin="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Outcome branches -->
+  <path d="M888,150 C 980,150 1010,120 1090,112" stroke="#34D399" stroke-opacity="0.4" stroke-width="2" fill="none"/>
+  <path d="M888,192 C 980,192 1010,222 1090,230" stroke="#F87171" stroke-opacity="0.4" stroke-width="2" fill="none"/>
+
+  <!-- Outcome pills -->
+  <g transform="translate(1090,96)"><rect width="150" height="34" rx="17" fill="#34D39914" stroke="#34D39966"/><text x="30" y="22" font-size="13" fill="#6EE7B7">&#10003; CLEARED</text></g>
+  <g transform="translate(1090,214)"><rect width="150" height="34" rx="17" fill="#F8717114" stroke="#F8717166"/><text x="30" y="22" font-size="13" fill="#FCA5A5">&#9888; BLOCKED</text></g>
+
+  <!-- Flowing transactions: mostly cleared (green) -->
+  <g fill="#34D399">
+    <circle r="5"><animateMotion dur="3.4s" begin="0s"    repeatCount="indefinite" path="M120,170 H820 C 888,170 980,150 1090,113"/></circle>
+    <circle r="5"><animateMotion dur="3.4s" begin="-0.7s" repeatCount="indefinite" path="M120,170 H820 C 888,170 980,150 1090,113"/></circle>
+    <circle r="5"><animateMotion dur="3.4s" begin="-1.4s" repeatCount="indefinite" path="M120,170 H820 C 888,170 980,150 1090,113"/></circle>
+    <circle r="5"><animateMotion dur="3.4s" begin="-2.1s" repeatCount="indefinite" path="M120,170 H820 C 888,170 980,150 1090,113"/></circle>
+    <circle r="5"><animateMotion dur="3.4s" begin="-2.8s" repeatCount="indefinite" path="M120,170 H820 C 888,170 980,150 1090,113"/></circle>
+  </g>
+  <!-- Occasional fraud (red) diverted to BLOCKED -->
+  <circle r="6" fill="#F87171">
+    <animate attributeName="fill" values="#34D399;#34D399;#F87171;#F87171" keyTimes="0;0.45;0.5;1" dur="8s" begin="3s" repeatCount="indefinite"/>
+    <animateMotion dur="8s" begin="3s" repeatCount="indefinite" keyPoints="0;0.55;1" keyTimes="0;0.5;1" calcMode="linear"
+      path="M120,170 H820 C 888,170 980,190 1090,231"/>
+  </circle>
+</svg>
