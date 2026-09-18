@@ -44,7 +44,7 @@ I'm a final-year CSE undergraduate at **VIT Vellore** (CGPA **9.16/10.0**, gradu
 ### Tech I build with
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,c,java,fastapi,flask,redis,postgres,docker,aws,githubactions,pytorch,tensorflow,sklearn,react,linux,git&perline=9"/>
+  <img src="https://skillicons.dev/icons?i=python,cpp,c,java,go,fastapi,flask,redis,postgres,docker,aws,githubactions,pytorch,tensorflow,sklearn,react,linux,git&perline=9"/>
 </p>
 
 <p align="center">
@@ -73,34 +73,35 @@ I'm a final-year CSE undergraduate at **VIT Vellore** (CGPA **9.16/10.0**, gradu
 </td>
 <td width="50%" valign="top">
 
-#### [CloudSense](https://github.com/Apoorvan-A/CloudSense_v2)
-**Predictive cloud-resource analytics.** `PyTorch · FastAPI · Docker · AWS`
+#### [husk](https://github.com/Apoorvan-A/husk)
+**Minimal OCI container runtime, from kernel primitives.** `Go · namespaces · cgroup v2 · seccomp-BPF`
 
-- 4-hour CPU forecasting, **R² 0.73 / MAE 5.7%**, zero train/serve skew
-- Diagnosed and eliminated a data-leakage bug (**R² −1.7 &rarr; 0.70**)
-- Reproducible **7-model benchmark** (CEEMDAN+CNN-BiLSTM, Transformer, LSTM…) on real AWS/Numenta NAB telemetry, GitHub Actions CI
+- Runs containers with no Docker, libcontainer, or containerd — **7 namespaces**, `pivot_root`, cgroup v2 limits (memory / cpu / pids / io)
+- overlayfs copy-on-write roots; **veth + bridge networking** with IPAM, `MASQUERADE` egress and `DNAT` port publishing
+- Rootless via user namespaces; **hand-assembled seccomp-BPF** filter (no libseccomp, no cgo); OCI `create`/`start`/`state`/`kill`/`delete`
+- **22 adversarial tests** attempting breakout and limit-evasion; Prometheus `/metrics` read straight from cgroup files
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-#### [AgroGuard](https://github.com/Apoorvan-A/Agrogaurd)
-**Multimodal AI for precision agriculture.** `TensorFlow · XGBoost · SHAP · OpenCV`
+#### [AgentGate](https://github.com/Apoorvan-A/AgentGate)
+**LLM code generation behind a test-and-audit gate.** `Python · Gemini · PyTest · AST`
 
-- **MobileNetV2** plant-disease detection (15 classes, Grad-CAM)
-- **XGBoost** soil-based crop recommendation across 22 crops
-- Production model selected from **8 algorithms** (5-fold CV), with SHAP and Grad-CAM explainability
+- Drives an LLM agent to implement machine-readable specs, gating every result on a hand-written PyTest suite, a **90% coverage floor**, and a static audit
+- Live Gemini run: **83% first-pass &rarr; 100%** merge-ready within &le;3 guided iterations across 6 specs; **9 spec violations** blocked before merge
+- Feeds *named* edge-case failures back to the agent without exposing test source; forensics flags input mutation, swallowed exceptions, and spec drift (AST + ruff + bandit)
 
 </td>
 <td width="50%" valign="top">
 
-#### [Assemble](https://github.com/Apoorvan-A/assemble)
-**Full-stack platform for hackathon teams.** `React · TypeScript · Flask · Socket.IO`
+#### [CloudSense](https://github.com/Apoorvan-A/CloudSense_v2)
+**Predictive cloud-resource analytics.** `PyTorch · FastAPI · Docker · AWS`
 
-- Real-time chat and notifications over WebSockets
-- JWT with GitHub/Google OAuth, rate-limited API
-- In-app AI assistant grounded in live platform data
+- 4-hour CPU forecasting, **R² 0.73 / MAE 5.7%**, zero train/serve skew
+- Diagnosed and eliminated a data-leakage bug (**R² −1.7 &rarr; 0.70**)
+- Reproducible **7-model benchmark** (CEEMDAN+CNN-BiLSTM, Transformer, LSTM…) on real AWS/Numenta NAB telemetry, GitHub Actions CI
 
 </td>
 </tr>
