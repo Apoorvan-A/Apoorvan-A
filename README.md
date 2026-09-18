@@ -1,37 +1,37 @@
 <!--
-  GitHub PROFILE README — lives in the repo named exactly Apoorvan-A/Apoorvan-A.
+  GitHub PROFILE README, in the repo named exactly Apoorvan-A/Apoorvan-A.
   See SETUP.md for details.
 -->
 
 <a href="https://github.com/Apoorvan-A">
-  <img src="./assets/banner.svg" alt="Apoorvan A — Backend · Distributed Systems · Applied ML" width="100%"/>
+  <img src="./assets/banner.svg" alt="Apoorvan A · Backend · Distributed Systems · Applied ML" width="100%"/>
 </a>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/apoorvan1/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="mailto:apoorvan10@gmail.com"><img src="https://img.shields.io/badge/Email-Reach_out-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://github.com/Apoorvan-A"><img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://drive.google.com/file/d/1yvuhKXTCddn88bbW_3cs1Wq-grvJ_isH/view"><img src="https://img.shields.io/badge/Résumé-View-6366F1?style=for-the-badge&logo=readdotcv&logoColor=white"/></a>
+  <a href="https://drive.google.com/file/d/1idEL1jdoJ53lm5AjkpSOl1fZPIRaD2CK/view"><img src="https://img.shields.io/badge/Résumé-View-6366F1?style=for-the-badge&logo=readdotcv&logoColor=white"/></a>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=SF+Mono&weight=600&size=20&pause=1200&color=67E8F9&center=true&vCenter=true&width=680&lines=1%2C275+tx%2Fs+at+70+ms+p99+%E2%80%94+zero+backlog;Low-latency+backends+%2B+applied+ML%2FLLM;Final-year+CSE+%40+VIT+Vellore+%C2%B7+CGPA+9.16;Targeting+Backend+%C2%B7+Systems+%C2%B7+AI-ML+roles" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.demolab.com?font=SF+Mono&weight=600&size=20&pause=1200&color=67E8F9&center=true&vCenter=true&width=680&lines=1%2C275+tx%2Fs+at+70+ms+p99%2C+zero+backlog;Low-latency+backends+%2B+applied+ML%2FLLM;Final-year+CSE+%40+VIT+Vellore+%C2%B7+CGPA+9.16;Targeting+Backend+%C2%B7+Systems+%C2%B7+AI-ML+roles" alt="Typing SVG"/>
 </p>
 
 ---
 
 ### About
 
-I'm a final-year CSE undergraduate at **VIT Vellore** (CGPA **9.16/10.0**, graduating 2027) who works best in the parts of software where latency, correctness, and scale actually matter. I've shipped an event-driven fraud-scoring service at **1,275 tx/s (70 ms p99)** and a leakage-free cloud-CPU forecasting benchmark across **7 models** — and I care as much about the load test and the CI gate as the feature itself.
+I'm a final-year CSE undergraduate at **VIT Vellore** (CGPA **9.16/10.0**, graduating 2027) who works best in the parts of software where latency, correctness, and scale actually matter. I've shipped an event-driven fraud-scoring service at **1,275 tx/s (70 ms p99)** and a leakage-free cloud-CPU forecasting benchmark across **7 models**, and I care as much about the load test and the CI gate as the feature itself.
 
-- **Strong in** — Python backend engineering, low-latency distributed systems, applied ML/LLM
-- **Recently** — Software Engineering Intern at **Ramco Systems**, building async FastAPI services behind an enterprise LLM chatbot
-- **Targeting** — Backend, Systems, and AI-ML software engineering roles
-- **Based in** — Salem, Tamil Nadu, India
+- **Strong in:** Python backend engineering, low-latency distributed systems, applied ML/LLM
+- **Recently:** Software Engineering Intern at **Ramco Systems**, building async FastAPI services behind an enterprise LLM chatbot
+- **Targeting:** Backend, Systems, and AI-ML software engineering roles
+- **Based in:** Salem, Tamil Nadu, India
 
 ---
 
-### Signature system — Real-Time Fraud Scoring
+### Signature system: Real-Time Fraud Scoring
 
 <p align="center">
   <img src="./assets/fraud-stream.svg" alt="Live fraud-scoring pipeline: transactions stream through Redis into the scoring engine and are cleared or blocked" width="100%"/>
@@ -68,7 +68,7 @@ I'm a final-year CSE undergraduate at **VIT Vellore** (CGPA **9.16/10.0**, gradu
 - **1,275 tx/s at p99 70 ms**, zero consumer backlog (k6)
 - **4.7&times; feature-lookup throughput** (770 &rarr; 3,634 ops/s; p99 48 &rarr; 10 ms) via an O(1) Redis store and atomic Lua
 - CI-gated tests, one-command Docker deploy, live WebSocket dashboard
-- Async LLM explainability with an off-hot-path fallback — an LLM outage never blocks a decision
+- Async LLM explainability with an off-hot-path fallback, so an LLM outage never blocks a decision
 
 </td>
 <td width="50%" valign="top">
@@ -76,7 +76,7 @@ I'm a final-year CSE undergraduate at **VIT Vellore** (CGPA **9.16/10.0**, gradu
 #### [husk](https://github.com/Apoorvan-A/husk)
 **Minimal OCI container runtime, from kernel primitives.** `Go · namespaces · cgroup v2 · seccomp-BPF`
 
-- Runs containers with no Docker, libcontainer, or containerd — **7 namespaces**, `pivot_root`, cgroup v2 limits (memory / cpu / pids / io)
+- Runs containers with no Docker, libcontainer, or containerd: **7 namespaces**, `pivot_root`, cgroup v2 limits (memory / cpu / pids / io)
 - overlayfs copy-on-write roots; **veth + bridge networking** with IPAM, `MASQUERADE` egress and `DNAT` port publishing
 - Rootless via user namespaces; **hand-assembled seccomp-BPF** filter (no libseccomp, no cgo); OCI `create`/`start`/`state`/`kill`/`delete`
 - **22 adversarial tests** attempting breakout and limit-evasion; Prometheus `/metrics` read straight from cgroup files
@@ -115,11 +115,11 @@ I'm a final-year CSE undergraduate at **VIT Vellore** (CGPA **9.16/10.0**, gradu
   <img src="./assets/stats.svg" alt="1,275 tx/s sustained · 70 ms p99 latency · 4.7× throughput gain · 7 ML models benchmarked · 9.16 CGPA" width="100%"/>
 </p>
 
-<p align="center"><sub>Numbers from shipped work — see the <a href="https://github.com/Apoorvan-A/Fraud-Detection">fraud engine</a> and <a href="https://github.com/Apoorvan-A/CloudSense_v2">CloudSense</a>.</sub></p>
+<p align="center"><sub>Numbers from shipped work. See the <a href="https://github.com/Apoorvan-A/Fraud-Detection">fraud engine</a> and <a href="https://github.com/Apoorvan-A/CloudSense_v2">CloudSense</a>.</sub></p>
 
 ### Contribution activity
 
-<!-- Animated contribution snake — generated by the GitHub Action in .github/workflows/snake.yml -->
+<!-- Animated contribution snake, generated by the GitHub Action in .github/workflows/snake.yml -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Apoorvan-A/Apoorvan-A/output/snake-dark.svg"/>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Apoorvan-A/Apoorvan-A/output/snake.svg"/>
@@ -130,9 +130,9 @@ I'm a final-year CSE undergraduate at **VIT Vellore** (CGPA **9.16/10.0**, gradu
 
 ### Achievements & Certifications
 
-- **Google GDSC DevJams '24** — reached the penultimate round with *Vipool*, a carpooling platform, against **120+ teams** (top 15% of the CSE cohort)
-- **Oracle Cloud Infrastructure 2024 Generative AI Certified Professional** — LLM fundamentals, prompt engineering, RAG
-- **Supervised Machine Learning: Regression & Classification** — Andrew Ng / DeepLearning.AI (Coursera)
+- **Google GDSC DevJams '24**: reached the penultimate round with *Vipool*, a carpooling platform, against **120+ teams** (top 15% of the CSE cohort)
+- **Oracle Cloud Infrastructure 2024 Generative AI Certified Professional**: LLM fundamentals, prompt engineering, RAG
+- **Supervised Machine Learning: Regression & Classification**, Andrew Ng / DeepLearning.AI (Coursera)
 
 ---
 
